@@ -40,8 +40,8 @@ const Stack = createStackNavigator();
     <SessionContext.Provider value={session}>
       <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Számológép" component={Prog}/>
         <Stack.Screen name="Bejelentkezés" component={Signin}/>
+        <Stack.Screen name="Számológép" component={Prog}/>
         <Stack.Screen name="Regisztráció" component={Reg}/>
     </Stack.Navigator>
     </NavigationContainer>
