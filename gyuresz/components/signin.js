@@ -1,8 +1,7 @@
-import { ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import React from 'react'
 import supabase from '../lib/supabase-client';
 import { useState, createContext, useEffect} from 'react';
-
 
 const Signin = ({ navigation }) => {
     const [email,setEmail] = useState("email")

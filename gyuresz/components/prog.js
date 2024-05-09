@@ -14,22 +14,22 @@ const Prog = ({ navigation }) => {
           <TextInput style={styles.szamkiiras}>{szam}</TextInput>
         </View>
         <View style={styles.buttoncontainer}>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"7")}><Text style={styles.szamfelirat}>7</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"8")}><Text style={styles.szamfelirat}>8</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"9")}><Text style={styles.szamfelirat}>9</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"+")}><Text style={styles.szamfelirat1}>+</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"4")}><Text style={styles.szamfelirat}>4</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"5")}><Text style={styles.szamfelirat}>5</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"6")}><Text style={styles.szamfelirat}>6</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"-")}><Text style={styles.szamfelirat1}>-</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"1")}><Text style={styles.szamfelirat}>1</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"2")}><Text style={styles.szamfelirat}>2</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"3")}><Text style={styles.szamfelirat}>3</Text></TouchableOpacity> 
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"*")}><Text style={styles.szamfelirat1}>*</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"7")}><Text style={styles.szamfelirat}>7</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"8")}><Text style={styles.szamfelirat}>8</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"9")}><Text style={styles.szamfelirat}>9</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button2} onPress={()=> setSzam(szam+"+")}><Text style={styles.szamfelirat2}>+</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"4")}><Text style={styles.szamfelirat}>4</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"5")}><Text style={styles.szamfelirat}>5</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"6")}><Text style={styles.szamfelirat}>6</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button2} onPress={()=> setSzam(szam+"-")}><Text style={styles.szamfelirat2}>-</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"1")}><Text style={styles.szamfelirat}>1</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"2")}><Text style={styles.szamfelirat}>2</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"3")}><Text style={styles.szamfelirat}>3</Text></TouchableOpacity> 
+            <TouchableOpacity style={styles.button2} onPress={()=> setSzam(szam+"*")}><Text style={styles.szamfelirat2}>*</Text></TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={()=> setSzam(Szamolas(szam))}><Text style={styles.szamfelirat1}>=</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"0")}><Text style={styles.szamfelirat}>0</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button1} onPress={()=> setSzam(szam+"0")}><Text style={styles.szamfelirat}>0</Text></TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+".")}><Text style={styles.szamfelirat1}>.</Text></TouchableOpacity> 
-            <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"/")}><Text style={styles.szamfelirat1}>/</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button2} onPress={()=> setSzam(szam+"/")}><Text style={styles.szamfelirat2}>/</Text></TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={()=> setSzam("")}><Text style={styles.szamfelirat1}>C</Text></TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={()=> setSzam(Torles(szam))}><Text style={styles.szamfelirat1}>&#x21d0;</Text></TouchableOpacity> 
             <TouchableOpacity style={styles.button} onPress={()=> setSzam(szam+"**")}><Text style={styles.szamfelirat1}>^</Text></TouchableOpacity>
@@ -71,6 +71,18 @@ function Torles(parameter){
 }
 function Szamolas(parameter){
     try {
+      if (parameter=="69"){
+        alert("vicci szám")
+      }
+      if (parameter=="420"){
+        alert("fű xd")
+      }
+      if (parameter=="666"){
+        alert("ördögxd")
+      }
+        if (parameter == "") {
+          return "0"
+        }
         parameter = eval(parameter)
         if (parameter == Number.POSITIVE_INFINITY || parameter == Number.NEGATIVE_INFINITY) {
             return "A végtelenbe és tovább"
@@ -78,6 +90,7 @@ function Szamolas(parameter){
         if (isNaN(parameter)){
           return "Ez bizony egy NaN :)"
         }
+
         return parameter
     } catch (error) {
         alert("Ne már ne csináld ezt")
@@ -143,13 +156,39 @@ const styles = StyleSheet.create({
         justifyContent:'center'
         
       },
+      button1: {
+        backgroundColor: '#f69133',
+        width: 60,
+        height: 60,
+        margin: 5,
+        padding: 5,
+        alignItems:'center',
+        borderRadius:20,
+        justifyContent:'center',
+        backgroundColor: 'grey'
+        
+      },
+      button2: {
+        width: 60,
+        height: 60,
+        margin: 5,
+        padding: 5,
+        alignItems:'center',
+        borderRadius:20,
+        justifyContent:'center',
+        backgroundColor: '#fcbe84'
+      },
       szamfelirat:{
-        //fontWeight:'bold',
-        color:'black'
+        fontWeight:'bold',
+        color:'white'
       },
       szamfelirat1:{
       fontWeight:'bold',
       color:'white'
+    },
+    szamfelirat2:{
+      fontWeight:'bold',
+      color:'black'
     },
     buttoncontainer: {
         display: 'flex',
